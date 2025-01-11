@@ -7,7 +7,7 @@ main,
 nav,
 footer {
     max-width: 640px;
-    margin: 0 auto;
+    margin: auto 1;
 }
 
 header {
@@ -15,11 +15,14 @@ header {
     color: white;
     font-weight: 400;
     font-size: x-large;
+    display: flex;
 }
 
 header img,
-head span {
+header span {
     padding: 1rem;
+    margin: auto 1rem;
+    margin-left: 0;
 }
 
 nav {
