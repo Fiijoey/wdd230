@@ -1,0 +1,109 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header,
+main,
+nav,
+footer {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgb(234, 146, 58);
+    color: white;
+    font-weight: 400;
+    font-size: x-large;
+}
+
+header img,
+head span {
+    padding: 1rem;
+}
+
+nav {
+    background-color: rgb(106, 75, 41);
+    color: white;
+    text-align: center;
+    padding: 0;
+
+}
+
+li,
+li a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    max-width: 640px;
+}
+
+ul li {
+    padding: 1rem;
+    font-weight: 200;
+}
+
+main h1 {
+    border-bottom: 1px solid #bbb;
+    font-weight: 400;
+    font-size: x-large;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    margin: 1rem auto;
+}
+
+.card h2 {
+    margin: 0;
+    background-color: rgb(234, 146, 58);
+    padding: 1rem;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: large;
+    color: white;
+}
+
+.card p {
+    text-align: center;
+    font-weight: 200;
+}
+
+.card li,
+.card a {
+    color: black;
+
+}
+
+.card a {
+    text-decoration: underline;
+}
+
+.card ul {
+    padding: 1rem;
+}
+
+nav ul li:hover {
+    background-color: rgb(72, 39, 1);
+    font-weight: 400;
+}
+
+.active {
+    background-color: rgb(72, 39, 1);
+    font-weight: 400;
+}
+
+footer {
+    background-color: rgb(234, 146, 58);
+    padding: 1rem;
+    text-align: center;
+    font-weight: 300;
+}
