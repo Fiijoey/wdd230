@@ -53,7 +53,7 @@ ul li {
     font-weight: 200;
 }
 
-main{
+main {
     display: grid;
 }
 
@@ -97,7 +97,8 @@ main h1 {
     text-decoration: underline;
 }
 
-.card ul, .card p{
+.card ul,
+.card p {
     padding: 1rem;
 }
 
@@ -110,6 +111,15 @@ nav ul li:hover {
     background-color: rgb(9, 77, 149);
     font-weight: 400;
     color: rgb(27, 27, 66);
+}
+
+#mode {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+    font-size: 2rem;
 }
 
 footer {
