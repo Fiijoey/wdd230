@@ -17,6 +17,7 @@
 h1 {
     text-align: left;
     font-family: var(--heading-font);
+    color: var(--primary-color);
     font-size: 2rem;
     margin-left: 1rem;
     margin-top: 3rem;
@@ -79,7 +80,7 @@ header img {
     flex-direction: column;
     justify-content: space-evenly;
     list-style: none;
-    background-color: #333;
+    background-color: var(--primary-color);
     color: #fff;
 }
 
