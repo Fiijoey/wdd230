@@ -51,6 +51,10 @@ header img {
     content: "❎";
 }
 
+#menu:hover {
+    cursor: pointer;
+}
+
 .navigation {
     display: flex;
     flex-direction: column;
