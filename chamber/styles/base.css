@@ -39,7 +39,7 @@ h2 {
 }
 
 nav {
-    max-width: 450px;
+    max-width: 550px;
 }
 
 header img {
@@ -52,7 +52,7 @@ header img {
     font-size: 1.5rem;
     border: 0;
     background: none;
-    color: #000;
+    color: var(--primary-color);
     position: _________;
     ________;
     ________;
@@ -95,7 +95,7 @@ header img {
 
 .navigation a:hover {
     background-color: #bbb;
-    color: #333;
+    color: var(--primary-color);
     font-weight: 700;
 }
 
@@ -113,7 +113,7 @@ header {
     padding: .5rem;
     display: block;
     gap: 1rem;
-    max-width: 450px;
+    max-width: 550px;
     margin: auto;
     background-color: var(--accent1-color);
 }
@@ -145,7 +145,7 @@ header {
 
 main,
 footer {
-    max-width: 450px;
+    max-width: 550px;
     margin: auto;
     padding: 1rem;
 }
