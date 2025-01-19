@@ -139,6 +139,7 @@ header {
 .btn:hover {
     background-color: var(--secondary-color);
     color: var(--accent1-color);
+    cursor: pointer;
 }
 
 main,
