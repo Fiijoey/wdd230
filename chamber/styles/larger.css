@@ -70,6 +70,12 @@
 
     }
 
+    .weather-btn,
+    .spotlight-btn {
+        margin-left: 40%;
+
+    }
+
     .about-testimony {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
