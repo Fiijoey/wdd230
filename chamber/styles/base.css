@@ -115,6 +115,7 @@ header {
     gap: 1rem;
     max-width: 450px;
     margin: auto;
+    background-color: var(--accent1-color);
 }
 
 .header {
@@ -188,7 +189,8 @@ footer {
     font-size: .7rem;
     margin: 0;
 }
-.text{
+
+.text {
     display: flex;
 }
 
