@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: left;
+    font-family: times, serif;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: navy;
+    text-align: left;
+    margin: 1rem;
+}
+
+nav {
+    max-width: 450px;
+    margin: 1rem auto;
+}
+
+header img {
+    margin: auto;
+    margin-left: 1rem;
+}
+
+#menu {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: _________;
+    ________;
+    ________;
+}
+
+.btns {
+    margin: auto;
+    margin-right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: #333;
+    color: #fff;
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation a:hover {
+    background-color: #bbb;
+    color: #333;
+    font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+.active::before {
+    content: "📍";
+    /* just a wayfinding symbol for the user */
+}
+
+header {
+    padding: .5rem;
+    display: flex;
+    gap: 1rem;
+    max-width: 450px;
+    background-color: #bbb;
+    margin: auto;
+
+}
+
+.head-btn{
+    padding: .5rem;
+    border-radius: 5px;
+}
