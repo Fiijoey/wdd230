@@ -1,3 +1,13 @@
+:root {
+    --primary-color: #001242;
+    --secondary-color: #00B2CA;
+    --accent1-color: #FCF7F8;
+    --black-color: #000000;
+
+    --heading-font: "Lilita One", serif;
+    --paragraph-font: "Nunito", serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,16 +16,25 @@
 
 h1 {
     text-align: left;
-    font-family: times, serif;
-    font-size: 1.5rem;
+    font-family: var(--heading-font);
+    font-size: 2rem;
     margin-left: 1rem;
+    margin-top: 3rem;
+}
+
+p,
+a {
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+    margin: 1rem;
 }
 
 h2 {
     font-size: 1.2rem;
-    color: navy;
+    font-family: var(--paragraph-font);
+    color: var(--primary-color);
     text-align: left;
-    margin: 1rem;
+    margin: .5rem;
 }
 
 nav {
@@ -93,9 +112,7 @@ header {
     display: block;
     gap: 1rem;
     max-width: 450px;
-    background-color: #bbb;
     margin: auto;
-
 }
 
 .header {
@@ -107,4 +124,82 @@ header {
 .head-btn {
     padding: .5rem;
     border-radius: 5px;
+}
+
+/* From Main to Footer */
+
+.btn {
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+main,
+footer {
+    max-width: 450px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.hero-btns,
+.spotlight-btn,
+.weather-btn {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.testimonies h1 {
+    text-align: center;
+}
+
+.person {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--accent1-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.person img {
+    border-radius: 48%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 2rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: .7rem;
+    margin: 0;
+}
+
+.socials {
+    display: flex;
+    margin-left: 1rem;
+}
+
+.socials a {
+    margin: .5rem;
+    text-decoration: none;
+}
+
+.links {
+    display: flex;
+    border-bottom: solid 2px var(--black-color);
+}
+
+.rights p {
+    font-size: .8rem;
+    margin-top: 0;
+}
+
+footer {
+    text-align: left;
 }
