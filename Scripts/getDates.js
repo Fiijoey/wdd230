@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const modeButton = document.querySelector("#mode");
 const main = document.querySelector("main");
-const iList = document.querySelector("section");
+const iList = document.querySelector("#card");
 
 modeButton.addEventListener("click", () => {
   if (modeButton.textContent.includes("🕶️")) {
     main.style.background = "#000";
     main.style.color = "#fff";
-    iList.style.color = "#fff";
+    iList.style.background = "#fff";
     modeButton.textContent = "🔆";
   } else {
     main.style.background = "#eee";
