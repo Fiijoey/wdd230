@@ -1,8 +1,27 @@
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
     nav ul {
         display: flex;
         justify-content: space-around;
 
+    }
+
+    header,
+    main,
+    nav,
+    footer {
+        max-width: 900px;
+    }
+
+    ul {
+        margin: auto;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .options {
+        display: none;
     }
 
     nav ul li a {

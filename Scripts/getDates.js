@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const modeButton = document.querySelector("#mode");
 const main = document.querySelector("main");
-const iList = document.querySelector("ul");
+const iList = document.querySelector("section");
 
 modeButton.addEventListener("click", () => {
   if (modeButton.textContent.includes("🕶️")) {
@@ -26,6 +26,14 @@ modeButton.addEventListener("click", () => {
     main.style.color = "#000";
     modeButton.textContent = "🕶️";
   }
+});
+
+const hamButton = document.querySelector("#menu");
+const navigation = document.querySelector(".navigation");
+
+hamButton.addEventListener("click", () => {
+  navigation.classList.toggle("open");
+  hamButton.classList.toggle("open");
 });
 
 const date = new Date();
