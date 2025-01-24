@@ -213,6 +213,44 @@ footer {
     font-size: .8rem;
     margin-top: 0;
 }
+/*For Discover*/
+.sections{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: auto;
+}
+.sidebar{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .3rem;
+    padding: 1rem;
+}
+.main-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+th {
+    background-color: var(--secondary-color);
+    color: white;
+    font-family: var(--paragraph-font);
+    font-size: .5rem;
+    padding: .5rem;
+}
+th,
+td {
+    border: 1px solid var(--accent1-color);
+    padding: 10px;
+    text-align: center;
+    font-family: var(--paragraph-font);
+}
+.photos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
 
 footer {
     text-align: left;
