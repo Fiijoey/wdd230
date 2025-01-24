@@ -95,4 +95,41 @@
         justify-content: space-between;
     }
 
+    table {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+
+    th {
+        background-color: var(--secondary-color);
+        color: white;
+    }
+
+    td {
+        background-color: #fff;
+    }
+
+    td:hover {
+        background-color: #f1f1f1;
+    }
+
+    @media (max-width: 600px) {
+
+        table,
+        th,
+        td {
+            font-size: 14px;
+        }
+    }
+
 }
