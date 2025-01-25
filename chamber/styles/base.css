@@ -251,6 +251,20 @@ td {
     grid-template-columns: 1fr;
     gap: 1rem;
 }
+.photos img {
+    background-color: black;
+    animation: fade 15s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 footer {
     text-align: left;
