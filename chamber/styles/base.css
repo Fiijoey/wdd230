@@ -218,7 +218,6 @@ footer {
 .sections {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
     margin: auto;
 }
 
@@ -232,7 +231,6 @@ footer {
 .main-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
     padding: 1rem;
 }
 
@@ -255,7 +253,6 @@ td {
 .photos {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
 }
 
 .photos img {
