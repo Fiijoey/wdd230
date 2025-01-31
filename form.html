@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD 230 - Web Frontend Development Course assignment portal,Forms, Joseph Fiifi Mensah" />
+    <meta name="author" content="Joseph Fiifi Mensah" />
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/form.css" />
+    <title>Joseph Fiifi Mensah - WDD 230 - Web Frontend Development Forms</title>
+</head>
+
+<body>
+    <header>
+        <h2>Reaching out to Fiifi</h2>
+    </header>
+    <main>
+        <form method="get" action="record.html" class="webform">
+            <fieldset>
+                <legend>Client information</legend>
+                <label for="">First name* <input type="text" name="fname" required></label>
+                <label for="">Last name* <input type="text" name="lname" required></label>
+                <label for="">Phone <input type="tel" name="phone" placeholder="1235551234"></label>
+                <label for="">Email* <input type="email" name="email" placeholder="fiifi@gmail.com" required></label>
+                <label for="">Website <input type="url" name="url" placeholder="http://"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Purpose for Contact</legend>
+                <div>Audience</div>
+                <label for=""><input type="radio" name="audience" value="new"> New</label>
+                <label for=""><input type="radio" name="audience" value="old"> Old</label>
+                <label for=""><input type="radio" name="audience" value="returning"> Returning</label>
+
+                <div>Areas to Support</div>
+                <label for=""><input type="checkbox" name="helping" value="yes"> Help with content</label>
+                <label for=""><input type="checkbox" name="correction" value="yes"> Correction of content</label>
+                <label for=""><input type="checkbox" name="collaboration" value="yes"> Collaboration request</label>
+            </fieldset>
+            <fieldset>
+                <legend>Funding</legend>
+                <label for="">Anticipated Date <input type="date" name="anticipateDate"></label>
+                <label for=""> Course Subject
+                    <select name="means" id="">
+                        <option value="">Please Select &#9662; </option>
+                        <option value="gift">Gifts Donation</option>
+                        <option value="cash">Cash Donations</option>
+                        <option value="device">Device Donation</option>
+                        <option value="collaboration">Collaboration Support</option>
+                        <option value="suggestion">Suggestions</option>
+                    </select>
+
+                </label>
+
+            </fieldset>
+
+            <input type="submit" value="Reach Out to Fiifi">
+
+        </form>
+    </main>
+    <footer>
+        &copy; 2025 &bull; Joseph Fiifi Mensah &bull; 123-555-6789
+    </footer>
+
+</body>
+
+</html>
