@@ -54,8 +54,6 @@ header img {
     background: none;
     color: var(--primary-color);
     position: _________;
-    ________;
-    ________;
 }
 
 .btns {
@@ -277,6 +275,82 @@ td {
     width: 300px;
     margin: 20px auto;
     text-align: center;
+}
+
+/*For For Join Us page*/
+
+.joinmain h1 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.membership-benefits {
+    display: none;
+    margin-left: 20px;
+}
+.membership-benefits li{
+    font-family: var(--paragraph-font);
+    padding: .2rem;
+    font-size: .9rem;
+}
+.membership-benefits li p{
+    font-size: .8rem;
+}
+
+.form-container input[type="text"],
+.form-container input[type="tel"],
+.form-container input[type="email"],
+.form-container input[type="url"],
+.form-container input[type="date"],
+.form-container select,
+.form-container textarea {
+    background-color: var(--accent1-color);
+    display: block;
+    border: solid 1px gray;
+    border-radius: 6px;
+    padding: .8rem;
+    color: gray;
+    width: 100%;
+    max-width: 340px;
+    appearance: none;
+}
+
+.form-container label {
+    margin-top: .8rem;
+    font-family: var(--paragraph-font);
+}
+
+.form-container input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 6px;
+    padding: 1rem;
+    width: 95%;
+    max-width: 400px;
+    margin-top: 1rem;
+    box-shadow: 1px 1px 4px gray;
+}
+
+.form-container input:required {
+    border-bottom: solid 5px rgb(228, 160, 160);
+}
+
+.form-container input:required:valid {
+    border-bottom: solid 5px rgb(141, 204, 133);
 }
 
 footer {

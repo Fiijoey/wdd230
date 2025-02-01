@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="WDD 230 - Web Frontend Development Accra chamber of commerces, Joseph Fiifi Mensah" />
+    <meta name="author" content="Joseph Fiifi Mensah" />
+    <meta property="og:title" content="Accra, Ghana" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ama.gov.gh/img/fade-slider/accra-1.jpg" />
+    <meta property="og:image" content="https://ama.gov.gh/img/fade-slider/accra-1.jpg" />
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <script defer src="scripts/chamber.js"></script>
+    <title>Accra Chamber of Commerce</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <img src="images/logo.png" alt="logo" width="30">
+
+            <div class="btns">
+                <a href="join.html"><button class="btn">Join Us</button></a>
+                <button class="btn">Explore</button>
+            </div>
+            <button id="menu"></button>
+
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html" title="home" class="active">Home</a></li>
+                <li><a href="discover.html" title="discover">Discover</a></li>
+                <li><a href="#" title="directory">Directory</a></li>
+                <li><a href="#" title="about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="joinmain">
+        <h1>Sign up to Accra Chamber of Commerce</h1>
+        <div class="container">
+
+            <form class="form-container" method="get" action="thankyou.html">
+                <label for="firstName">First Name:
+                    <input type="text" id="firstName" name="firstName" required>
+                </label>
+                <label for="lastName">Last Name:
+                    <input type="text" id="lastName" name="lastName" required>
+                </label>
+                <label for="title">Title/Position:
+                    <input type="text" id="title" name="title" pattern="[A-Za-z\s-]{7,}">
+                </label>
+                <label for="email">Email:
+                    <input type="email" id="email" name="email" required placeholder="example@example.com">
+                </label>
+                <label for="phone">Mobile Phone:
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{9,10}">
+                </label>
+                <label for="organization">Organization Name:
+                    <input type="text" id="organization" name="organization" required>
+                </label>
+                <label for="membership">Membership Level:
+                    <select id="membership" name="membership">
+                        <option value="">Please Select &#9662; </option>
+                        <option value="np">NP Membership (No Fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+                <label for="description">Organization Description:
+                    <textarea id="description" name="description"></textarea>
+                </label>
+                <input type="hidden" id="timestamp" name="timestamp" value="<?php echo date('Y-m-d H:i:s'); ?>">
+                <input type="submit" value="Sign Up Now">
+            </form>
+            <div class="membership-benefits">
+                <h2>Membership Benefits</h2>
+                <ul>
+                    <li><strong>NP Membership: No Fee: </strong> 
+                        <p>This membership is free for non-profit organizations.</p>
+                        <p> Event Participation: Access to community events and networking opportunities.</p>
+
+                    </li>
+                    <li><strong>Bronze Membership: Basic Benefits</strong>
+                        <p>Affordable Fee: Low-cost membership option.</p>
+                        <p>Advertising: Basic advertising opportunities on our website and newsletter.</p>
+                    </li>
+                    <li><strong>Silver Membership: Additional Benefits</strong> 
+                        <p>Enhanced Event Discounts: Greater discounts on event tickets and participation fees.</p>
+                        <p>Premium Advertising: Enhanced advertising opportunities, including spotlight positions on our website.</p>
+                    </li>
+                    <li><strong>Gold Membership: Premium Benefits</strong> 
+                        <p>Comprehensive Training: Access to all training sessions, including premium and specialized workshops.</p>
+                        <p>VIP Networking: Invitations to VIP networking events, exclusive meet-and-greet sessions, and private dinners.</p>
+                        <p>Event Sponsorship: Priority opportunities to sponsor major community events.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="links">
+            <a href="#"><img src="images/logo.png" alt="footer logo" width="40"></a>
+            <div class="text">
+                <div class="footer-links">
+                    <a href="#">Community News</a>
+                    <a href="#">Tourism information</a>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Contact Us</a>
+                    <a href="#">About Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="social-text">
+            <div class="socials">
+                <a href="#"><img src="images/fb.png" alt="facebook" width="20"></a>
+                <a href="#"><img src="images/x.png" alt="twitter" width="30"></a>
+                <a href="#"><img src="images/ig.png" alt="instagram" width="20"></a>
+                <a href="#"><img src="images/in.png" alt="linkedIn" width="20"></a>
+            </div>
+            <div class="rights">
+                <p>&#169;<span id="currentyear"></span> &nbsp; &nbsp; Accra Chamber of Commerce. All rights reserved.
+                    &nbsp;
+                    Accra, Ghana</p>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
