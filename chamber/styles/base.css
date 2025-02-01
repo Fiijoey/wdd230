@@ -129,9 +129,12 @@ header {
 /* From Main to Footer */
 
 .btn {
+    text-decoration: none;
+    color: var(--primary-color);
     padding: .5rem;
     border-radius: 5px;
     border-color: var(--secondary-color);
+    
 }
 
 .btn:hover {
