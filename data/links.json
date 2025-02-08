@@ -1,0 +1,129 @@
+{
+ "weeks" : 
+ [
+    {
+        "week" : "Week 1",
+        "links" : 
+        [
+            {
+                "url" : "week01/holygrail.html",
+                "title" : "Layout"
+            },
+            {
+                "url" : "week01/media-query.html",
+                "title" : "Media Query"
+            },
+            {
+                "url" : "week01/chamber-site-plan.html",
+                "title" : "Chamber Site Plan"
+            }
+        ]
+    },
+    {
+        "week" : "Week 2",
+        "links" : 
+        [
+            {
+                "url" : "week02/design.html",
+                "title" : "Design Activity"
+            },
+            {
+                "url" : "week02/bom.html",
+                "title" : "BOM Top 10"
+            },
+            {
+                "url" : "https://codepen.io/your-work/",
+                "title" : "CodePen"
+            }
+        ]
+    },
+    {
+        "week" : "Week 3",
+        "links" : 
+        [
+            {
+                "url" : "week03/images/landscape.webp",
+                "title" : "WebP"
+            },
+            {
+                "url" : "week03/lazyload.html",
+                "title" : "Lazy Loading"
+            },
+            {
+                "url" : "week03/responsive-images.html",
+                "title" : "Responsive Images"
+            },
+            {
+                "url" : "week03/bom.html",
+                "title" : "BOM with Storage"
+            }
+        ]
+    },
+    {
+        "week" : "Week 4",
+        "links" : 
+        [
+            {
+                "url" : "https://codepen.io/Fiijoey/pen/LEPqRgB",
+                "title" : "CSS Pseudo Classes"
+            },
+            {
+                "url" : "week04/images/stylex.png",
+                "title" : "Exercise"
+            },
+            {
+                "url" : "week04/tablebuild.html",
+                "title" : "HTML Tables"
+            },
+            {
+                "url" : "week04/Form-start/index.html",
+                "title" : "Form Demo"
+            }
+        ]
+    },
+    {
+        "week" : "Week 5",
+        "links" : 
+        [
+            {
+                "url" : "https://codepen.io/Fiijoey/pen/yyBWxwd",
+                "title" : "Psuedo Elements"
+            },
+            {
+                "url" : "week05/new-ward-members.json",
+                "title" : "New ward members JSON"
+            },
+            {
+                "url" : "week05/prophets.html",
+                "title" : "LDS Prophets"
+            },
+            {
+                "url" : "week05/weather.html",
+                "title" : "Weather API"
+            }
+        ]
+    },
+    {
+        "week" : "Week 6",
+        "links" : 
+        [
+            {
+                "url" : "",
+                "title" : "Psuedo Elements"
+            },
+            {
+                "url" : "",
+                "title" : "New ward members JSON"
+            },
+            {
+                "url" : "",
+                "title" : "LDS Prophets"
+            },
+            {
+                "url" : "",
+                "title" : "Weather API"
+            }
+        ]
+    }
+ ]
+}
