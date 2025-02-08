@@ -172,7 +172,19 @@ main h1 {
 
 .card ul,
 .card p {
-    padding: 1rem;
+    padding: .3rem;
+}
+.weather{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+figure{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
 }
 
 nav ul li:hover {
