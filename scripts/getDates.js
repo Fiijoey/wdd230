@@ -48,11 +48,11 @@ document.getElementById("currentyear").innerHTML = year;
 document.getElementById("lastModified").innerHTML = modifiedt;
 
 const currentTemp = document.querySelector("#current-temp");
-const currentIcon = document.querySelector("#weather-icon");
 const currentDesc = document.querySelector("figcaption");
+const figure = document.querySelector("#currentIcon");
 
 const url =
-  "https://api.openweathermap.org/data/2.5/weather?lat=5.556&lon=0.1969&units=imperal&appid=9cafa123f783487bdb6face6f1d55796";
+  "https://api.openweathermap.org/data/2.5/weather?lat=5.55&lon=0.19&appid=9cafa123f783487bdb6face6f1d55796&units=metric";
 
 async function apiFetch() {
   try {
@@ -72,7 +72,8 @@ async function apiFetch() {
 apiFetch();
 
 function displayResults(data) {
-  currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+  const currentIcon = document.createElement("img");
+  currentTemp.innerHTML = `${data.main.temp}&deg;C`;
   const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
   let desc = data.weather[0].description;
   currentIcon.setAttribute("loading", "lazy");
@@ -81,6 +82,8 @@ function displayResults(data) {
   currentIcon.setAttribute("height", "50");
   currentIcon.setAttribute("src", `${iconsrc}`);
   currentDesc.textContent = `${desc}`;
+
+  figure.appendChild(currentIcon);
 }
 
 if (localStorage.getItem("visitCount")) {
