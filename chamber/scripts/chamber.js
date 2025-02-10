@@ -105,8 +105,8 @@ const displayDirectory = (members) => {
       `Picture of ${member.name}`
     );
     logo.setAttribute("loading", "lazy");
-    logo.setAttribute("width", "250");
-    logo.setAttribute("height", "250");
+    logo.setAttribute("width", "100");
+    logo.setAttribute("height", "100");
 
     
     card.appendChild(logo);

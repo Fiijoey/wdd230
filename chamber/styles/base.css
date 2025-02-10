@@ -134,7 +134,7 @@ header {
     padding: .5rem;
     border-radius: 5px;
     border-color: var(--secondary-color);
-    
+
 }
 
 .btn:hover {
@@ -144,7 +144,8 @@ header {
 }
 
 main,
-footer {
+footer,
+#directory {
     max-width: 550px;
     margin: auto;
     padding: 1rem;
@@ -303,12 +304,14 @@ td {
     display: none;
     margin-left: 20px;
 }
-.membership-benefits li{
+
+.membership-benefits li {
     font-family: var(--paragraph-font);
     padding: .2rem;
     font-size: .9rem;
 }
-.membership-benefits li p{
+
+.membership-benefits li p {
     font-size: .8rem;
 }
 
@@ -353,6 +356,40 @@ td {
 
 .form-container input:required:valid {
     border-bottom: solid 5px rgb(141, 204, 133);
+}
+
+
+/*For Directory page page*/
+.mainhead {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.switch {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+#grid,
+#list {
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#directory section {
+    max-width: 250px;
+    margin: auto;
+    padding: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    margin-bottom: 2rem;
+    justify-items: center;
+    border-radius: 10px;
+}
+
+#directory section p {
+    margin: 0;
 }
 
 footer {
