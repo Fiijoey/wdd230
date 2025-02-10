@@ -67,7 +67,7 @@ localStorage.setItem("lastVisit", currentVisit);
 
 /** CREATE AND POPULATE THE DIRECTORY CARDS */
 
-const url = "https://fiijoey.github.io/wdd230/...";
+const url = "https://fiijoey.github.io/wdd230/chamber/data/members.json";
 const cards = document.getElementById("directory");
 
 async function getDirectoryData() {
