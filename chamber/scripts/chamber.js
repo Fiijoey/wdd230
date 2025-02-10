@@ -64,3 +64,52 @@ if (!lastVisit) {
 }
 
 localStorage.setItem("lastVisit", currentVisit);
+
+/** CREATE AND POPULATE THE DIRECTORY CARDS */
+
+const url = "https://fiijoey.github.io/wdd230/...";
+const cards = document.getElementById("directory");
+
+async function getDirectoryData() {
+  const response = await fetch(url);
+  const data = await response.json();
+  displayDirectory(data.members);
+}
+
+getDirectoryData();
+
+const displayDirectory = (members) => {
+  members.forEach((member) => {
+    let card = document.createElement("section");
+    let logo = document.createElement("img");
+    let fullName = document.createElement("h2");
+    let address = document.createElement("p");
+    let phone = document.createElement("p");
+    let website = document.createElement("p");
+    let membership_level = document.createElement("p");
+
+    fullName.textContent = `${member.name}`;
+    address.textContent = `Address: ${member.address}`;
+    phone.textContent = `Phone: ${member.phone}`;
+    website.textContent = `Website: ${member.website}`;
+    membership_level.textContent = `Level: ${member.membership_level}`;
+
+    logo.setAttribute("src", member.image);
+    logo.setAttribute(
+      "alt",
+      `Picture of ${member.name}`
+    );
+    logo.setAttribute("loading", "lazy");
+    logo.setAttribute("width", "340");
+    logo.setAttribute("height", "440");
+
+    
+    card.appendChild(logo);
+    card.appendChild(fullName);
+    card.appendChild(phone);
+    card.appendChild(website);
+    card.appendChild(membership_level);
+
+    cards.appendChild(card);
+  });
+}

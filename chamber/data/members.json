@@ -1,0 +1,62 @@
+{
+    "members" :
+[
+    {
+      "name": "Tech Solutions Inc.",
+      "address": "123 Innovation Drive, Accra, Ghana",
+      "phone": "+233 30 123 4567",
+      "website": "https://techsolutionsinc.com",
+      "image": "images/techsolution.png",
+      "membership_level": "Gold"
+    },
+    {
+      "name": "Green Earth Ltd.",
+      "address": "456 Eco Street, Accra, Ghana",
+      "phone": "+233 30 987 6543",
+      "website": "https://greenearthltd.com",
+      "image": "images/greenearth.png",
+      "membership_level": "Silver"
+    },
+    {
+      "name": "HealthCare Partners",
+      "address": "789 Wellness Road, Accra, Ghana",
+      "phone": "+233 30 567 8910",
+      "website": "https://healthcarepartners.com",
+      "image": "images/healthcare.png",
+      "membership_level": "Platinum"
+    },
+    {
+      "name": "EduFuture Academy",
+      "address": "321 Knowledge Avenue, Accra, Ghana",
+      "phone": "+233 30 765 4321",
+      "website": "https://edufutureacademy.com",
+      "image": "images/edufuture.png",
+      "membership_level": "Gold"
+    },
+    {
+      "name": "Creative Designs Studio",
+      "address": "654 Art Lane, Accra, Ghana",
+      "phone": "+233 30 234 5678",
+      "website": "https://creativedesignsstudio.com",
+      "image": "images/creative.png",
+      "membership_level": "Silver"
+    },
+    {
+      "name": "FinancePros Consulting",
+      "address": "987 Market Street, Accra, Ghana",
+      "phone": "+233 30 876 5432",
+      "website": "https://financeprosconsulting.com",
+      "image": "images/financepros.png",
+      "membership_level": "Bronze"
+    },
+    {
+      "name": "Global Logistics Ltd.",
+      "address": "159 Supply Chain Drive, Accra, Ghana",
+      "phone": "+233 30 456 7890",
+      "website": "https://globallogisticsltd.com",
+      "image": "images/globallogistics.png",
+      "membership_level": "Gold"
+    }
+  ]
+  
+}
