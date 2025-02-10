@@ -36,7 +36,9 @@ function generateCalendar(year, month) {
   }
 
   table += "</tr></tbody></table>";
-  calendar.innerHTML = table;
+  if (calendar) {
+    calendar.innerHTML = table;
+  }
 }
 
 const today = new Date();
@@ -55,7 +57,9 @@ if (!lastVisit) {
   const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
   if (daysDifference < 1) {
-    sidebar.innerHTML = "<p>Back so soon! Awesome!</p>";
+    if (sidebar) {
+      sidebar.innerHTML = "<p>Back so soon! Awesome!</p>";
+    }
   } else if (daysDifference === 1) {
     sidebar.innerHTML = `<p>You last visited 1 day ago.</p>`;
   } else {
@@ -66,13 +70,14 @@ if (!lastVisit) {
 localStorage.setItem("lastVisit", currentVisit);
 
 /** CREATE AND POPULATE THE DIRECTORY CARDS */
-
+const baseURL = "https://fiijoey.github.io/wdd230/chamber/";
 const url = "https://fiijoey.github.io/wdd230/chamber/data/members.json";
 const cards = document.getElementById("directory");
 
 async function getDirectoryData() {
   const response = await fetch(url);
   const data = await response.json();
+  console.log(data);
   displayDirectory(data.members);
 }
 
@@ -100,12 +105,13 @@ const displayDirectory = (members) => {
       `Picture of ${member.name}`
     );
     logo.setAttribute("loading", "lazy");
-    logo.setAttribute("width", "340");
-    logo.setAttribute("height", "440");
+    logo.setAttribute("width", "250");
+    logo.setAttribute("height", "250");
 
     
     card.appendChild(logo);
     card.appendChild(fullName);
+    card.appendChild(address);
     card.appendChild(phone);
     card.appendChild(website);
     card.appendChild(membership_level);
