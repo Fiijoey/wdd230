@@ -173,20 +173,47 @@
 
     /*For Directory page page*/
 
-    #directory {
+    #directory .sections{
+        max-width: 850px;
+    }
+
+    .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         grid-gap: 5px;
         align-items: center;
     }
-
-    #directory h2 {
+    .default {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 5px;
+        align-items: center;
+    }
+    .default section {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        justify-items: center;
         text-align: center;
+    }
+    #directory h2 {
         font-size: 1.2rem;
     }
 
     #directory p {
-        text-align: center;
         font-size: .8rem;
+    }
+
+    .list{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        align-items: center;
+    }
+
+    .list section {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-between;
+        width: 100%;
     }
 }

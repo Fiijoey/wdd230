@@ -360,6 +360,18 @@ td {
 
 
 /*For Directory page page*/
+h3 {
+    font-size: 1rem;
+    font-family: var(--paragraph-font);
+    color: var(--primary-color);
+    margin: 1rem;
+
+}
+
+#connect{
+    margin-bottom: 5rem;
+}
+
 .mainhead {
     text-align: center;
     padding: 1.5rem;
@@ -379,17 +391,51 @@ td {
 }
 
 #directory section {
-    max-width: 250px;
-    margin: auto;
     padding: 1.5rem;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    margin-bottom: 2rem;
-    justify-items: center;
+    margin-bottom: 1rem;
     border-radius: 10px;
 }
 
-#directory section p {
+#directory section p,
+#directory section a{
     margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    align-items: center;
+}
+
+.grid section {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    justify-items: center;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+    text-align: left;
+
+}
+
+.list section {
+    text-align: left;
+    margin: 0;
+    
+}
+
+.list section p {
+    margin: 0;
+    text-align: left;
+    font-size: .8rem;
+}
+
+.list section img {
+    display: none;
 }
 
 footer {

@@ -73,6 +73,8 @@ localStorage.setItem("lastVisit", currentVisit);
 const baseURL = "https://fiijoey.github.io/wdd230/chamber/";
 const url = "https://fiijoey.github.io/wdd230/chamber/data/members.json";
 const cards = document.getElementById("directory");
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
 
 async function getDirectoryData() {
   const response = await fetch(url);
@@ -87,28 +89,25 @@ const displayDirectory = (members) => {
   members.forEach((member) => {
     let card = document.createElement("section");
     let logo = document.createElement("img");
-    let fullName = document.createElement("h2");
+    let fullName = document.createElement("h3");
     let address = document.createElement("p");
     let phone = document.createElement("p");
-    let website = document.createElement("p");
-    let membership_level = document.createElement("p");
+    let website = document.createElement("a");
+    let membership_level = document.createElement("h2");
 
     fullName.textContent = `${member.name}`;
-    address.textContent = `Address: ${member.address}`;
-    phone.textContent = `Phone: ${member.phone}`;
-    website.textContent = `Website: ${member.website}`;
-    membership_level.textContent = `Level: ${member.membership_level}`;
+    address.textContent = `${member.address}`;
+    phone.textContent = `${member.phone}`;
+    website.textContent = `${member.website}`;
+    membership_level.textContent = `${member.membership_level}`;
 
+    website.setAttribute("href", member.website);
     logo.setAttribute("src", member.image);
-    logo.setAttribute(
-      "alt",
-      `Picture of ${member.name}`
-    );
+    logo.setAttribute("alt", `Picture of ${member.name}`);
     logo.setAttribute("loading", "lazy");
     logo.setAttribute("width", "100");
     logo.setAttribute("height", "100");
 
-    
     card.appendChild(logo);
     card.appendChild(fullName);
     card.appendChild(address);
@@ -118,4 +117,18 @@ const displayDirectory = (members) => {
 
     cards.appendChild(card);
   });
+};
+
+gridbutton.addEventListener("click", () => {
+  cards.classList.add("grid");
+  cards.classList.remove("list");
+  cards.classList.remove("default");
+});
+
+listbutton.addEventListener("click", showList);
+
+function showList() {
+  cards.classList.add("list");
+  cards.classList.remove("grid");
+  cards.classList.remove("default");
 }
