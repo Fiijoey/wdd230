@@ -386,9 +386,27 @@ h3 {
 
 #grid,
 #list {
-    padding: 1rem;
+    padding: .7rem;
     border-radius: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--paragraph-font);
 }
+#grid img, #list img {
+    margin-left: 1rem;
+}
+
+#grid:hover,
+#list:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    font-weight: bolder;
+
+}
+
 
 #directory section {
     padding: 1.5rem;
