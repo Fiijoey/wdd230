@@ -1,5 +1,14 @@
 const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
+const navItems = document.querySelectorAll(".nav-link");
+
+navItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    document.querySelector(".active")?.classList.remove("active");
+    item.classList.toggle("active");
+  });
+});
+
 
 hamButton.addEventListener("click", () => {
   navigation.classList.toggle("open");
@@ -133,11 +142,3 @@ function showList() {
   cards.classList.remove("default");
 }
 
-const navItems = document.querySelectorAll(".nav-link");
-
-navItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    document.querySelector(".active").classList.remove("active");
-    item.classList.toggle("active");
-  });
-});
