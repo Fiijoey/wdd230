@@ -1,14 +1,24 @@
 const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
-const navItems = document.querySelectorAll(".nav-link");
+const navLinks = document.querySelectorAll(".nav-link");
+const currentURL = window.location.pathname;
 
-navItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    document.querySelector(".active")?.classList.remove("active");
-    item.classList.toggle("active");
+navLinks.forEach((link) => {
+  
+  if ("/chamber/" + link.getAttribute("href") === currentURL) {
+    
+    link.classList.add("active");
+  }
+
+
+  link.addEventListener("click", function () {
+  const activeLink = document.querySelector(".active");
+  if (activeLink) {
+    activeLink.classList.remove("active");
+  }
+  this.classList.add("active");
   });
 });
-
 
 hamButton.addEventListener("click", () => {
   navigation.classList.toggle("open");
@@ -141,4 +151,3 @@ function showList() {
   cards.classList.remove("grid");
   cards.classList.remove("default");
 }
-
