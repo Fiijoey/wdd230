@@ -132,3 +132,12 @@ function showList() {
   cards.classList.remove("grid");
   cards.classList.remove("default");
 }
+
+const navItems = document.querySelectorAll(".nav-link");
+
+navItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    document.querySelector(".active").classList.remove("active");
+    item.classList.toggle("active");
+  });
+});

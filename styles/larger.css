@@ -5,6 +5,10 @@
 
     }
 
+    body{
+        width: 900px;
+    }
+
     header,
     main,
     nav,
