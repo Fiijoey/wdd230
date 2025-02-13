@@ -4,19 +4,16 @@ const navLinks = document.querySelectorAll(".nav-link");
 const currentURL = window.location.pathname;
 
 navLinks.forEach((link) => {
-  
   if ("/chamber/" + link.getAttribute("href") === currentURL) {
-    
     link.classList.add("active");
   }
 
-
   link.addEventListener("click", function () {
-  const activeLink = document.querySelector(".active");
-  if (activeLink) {
-    activeLink.classList.remove("active");
-  }
-  this.classList.add("active");
+    const activeLink = document.querySelector(".active");
+    if (activeLink) {
+      activeLink.classList.remove("active");
+    }
+    this.classList.add("active");
   });
 });
 
@@ -30,6 +27,47 @@ const form = new Intl.DateTimeFormat("en-us", {
   dateStyle: "full",
   timeStyle: "short",
 });
+
+/** DISPLAY WEATHER */
+const currentTemp = document.querySelector("#current-temp");
+const currentDesc = document.querySelector("figcaption");
+const figure = document.querySelector("#currentIcon");
+
+const urlO =
+  "https://api.openweathermap.org/data/2.5/weather?lat=5.55&lon=0.19&appid=9cafa123f783487bdb6face6f1d55796&units=metric";
+
+async function apiFetch() {
+  try {
+    const response = await fetch(urlO);
+    if (response.ok) {
+      const data = await response.json();
+      //console.log(data);
+      displayResults(data);
+    } else {
+      throw Error(await response.text());
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+apiFetch();
+
+function displayResults(data) {
+const currentIcon = document.createElement("img");
+currentTemp.innerHTML = `${data.main.temp}&deg;C`;
+const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+let desc = data.weather[0].description;
+currentIcon.setAttribute("loading", "lazy");
+currentIcon.setAttribute("alt", "weather icon");
+currentIcon.setAttribute("width", "70");
+currentIcon.setAttribute("height", "70");
+currentIcon.setAttribute("src", `${iconsrc}`);
+currentDesc.textContent = `${desc}`;
+
+figure.appendChild(currentIcon);
+}
+
 var year = date.getFullYear();
 var modifiedt = form.format(new Date(document.lastModified));
 
@@ -90,13 +128,13 @@ localStorage.setItem("lastVisit", currentVisit);
 
 /** CREATE AND POPULATE THE DIRECTORY CARDS */
 const baseURL = "https://fiijoey.github.io/wdd230/chamber/";
-const url = "https://fiijoey.github.io/wdd230/chamber/data/members.json";
+const membersUrl = "https://fiijoey.github.io/wdd230/chamber/data/members.json";
 const cards = document.getElementById("directory");
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 
 async function getDirectoryData() {
-  const response = await fetch(url);
+  const response = await fetch(membersUrl);
   const data = await response.json();
   console.log(data);
   displayDirectory(data.members);
@@ -151,3 +189,4 @@ function showList() {
   cards.classList.remove("grid");
   cards.classList.remove("default");
 }
+

@@ -215,6 +215,16 @@ footer,
     margin-top: 0;
 }
 
+.weather{
+    margin: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--paragraph-font);
+}
+.weather-info h2 {
+    text-align: center;
+}
+
 /*For Discover*/
 .sections {
     display: grid;
