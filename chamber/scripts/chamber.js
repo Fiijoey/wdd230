@@ -40,7 +40,6 @@ const figure = document.querySelector("#currentIcon");
 const url0 = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
-
 async function apiFetch() {
   try {
     const response = await fetch(url);
@@ -88,11 +87,16 @@ function displayResults(data) {
   figure.appendChild(currentIcon);
 }
 
-
 function displayForecast(data) {
-  const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-
+  const daysOfTheWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   const tomorrowTemp = document.querySelector("#tomorrow-temp");
   const dayAfterTomorrowTemp = document.querySelector("#day-after-temp");
@@ -108,9 +112,7 @@ function displayForecast(data) {
   tomorrowTemp.innerHTML = `<h2>${daysOfTheWeek[tomorrow]}:</h2> <p>${data.list[8].main.temp}&deg;C</p>`;
   dayAfterTomorrowTemp.innerHTML = `<h2>${daysOfTheWeek[dayAfterTomorrow]}:</h2> <p>${data.list[16].main.temp}&deg;C</p>`;
   dayFourTemp.innerHTML = `<h2>${daysOfTheWeek[dayFour]}:</h2> <p>${data.list[24].main.temp}&deg;C</p>`;
-
 }
-
 
 var year = date.getFullYear();
 var modifiedt = form.format(new Date(document.lastModified));
@@ -177,10 +179,57 @@ const cards = document.getElementById("directory");
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 
+//** DISPLAY SPOTLIGHT */
+async function getMembers() {
+  try {
+    const response = await fetch(membersUrl);
+    const Dmembers = await response.json();
+    console.log(Dmembers);
+
+
+    function getRandomMembers(members, count) {
+      const qualifiedMembers = members.filter(
+        (member) =>
+          member.membership_level === "Gold" ||
+          member.membership_level === "Silver"
+      );
+      const shuffled = [qualifiedMembers].sort(() => .5 - Math.random());
+      return shuffled.slice(0, count);
+    }
+
+    function displaySpotlightMembers() {
+      const spotlightMembers = getRandomMembers(Dmembers.members, 3);
+      console.log(spotlightMembers);
+      const spotlightDiv = document.getElementById("spotlight");
+
+      spotlightDiv.innerHTML = spotlightMembers
+        .map(
+          (member) => `
+                            <div class="spotlight-member">
+                                <img src="${member.image}" alt="${member.name}" loading="lazy" width="100" height="100">
+                                <h3>${member.name}</h3>
+                                <p>${member.address}</p>
+                                <p>${member.phone}</p>
+                                <a href="${member.website}">${member.website}</a>
+                                <h2>${member.membership_level}</h2>
+                            </div>`
+        )
+        .join("");
+    }
+
+    displaySpotlightMembers();
+  } catch (error) {
+    console.error("An error occurred while fetching members", error);
+  }
+}
+
+getMembers();
+
+
 async function getDirectoryData() {
   const response = await fetch(membersUrl);
   const data = await response.json();
-  console.log(data);
+  //console.log(data);
   displayDirectory(data.members);
 }
 
@@ -233,3 +282,4 @@ function showList() {
   cards.classList.remove("grid");
   cards.classList.remove("default");
 }
+
