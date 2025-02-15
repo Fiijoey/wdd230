@@ -37,13 +37,30 @@ const currentTemp = document.querySelector("#current-temp");
 const currentDesc = document.querySelector("figcaption");
 const figure = document.querySelector("#currentIcon");
 
-const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+const url0 = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+
 async function apiFetch() {
   try {
     const response = await fetch(url);
     if (response.ok) {
       const data = await response.json();
-      //console.log(data);
+      console.log(data);
+      displayForecast(data);
+    } else {
+      throw Error(await response.text());
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+async function forecastFetch() {
+  try {
+    const response = await fetch(url0);
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data);
       displayResults(data);
     } else {
       throw Error(await response.text());
@@ -54,6 +71,7 @@ async function apiFetch() {
 }
 
 apiFetch();
+forecastFetch();
 
 function displayResults(data) {
   const currentIcon = document.createElement("img");
@@ -70,26 +88,29 @@ function displayResults(data) {
   figure.appendChild(currentIcon);
 }
 
-/** DISPLAY 3-DAYS FORECAST */
-const forecast = document.querySelector(".daysForecast");
-const forecastURL = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${latitude}&lon=${longitude}&appid=${forecastKey}&units=metric&cnt=3`;
 
-async function forecastFetch() {
-  try {
-    const response = await fetch(forecastURL);
-    if (response.ok) {
-      const data = await response.json();
-      console.log(data);
-      //displayForecast(data);
-    } else {
-      throw Error(await response.text());
-    }
-  } catch (error) {
-    console.log(error);
-  }
+function displayForecast(data) {
+  const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+
+
+  const tomorrowTemp = document.querySelector("#tomorrow-temp");
+  const dayAfterTomorrowTemp = document.querySelector("#day-after-temp");
+  const dayFourTemp = document.querySelector("#day-four-temp");
+
+  const tomorrow = new Date(data.list[8].dt * 1000).getDay();
+  console.log(tomorrow);
+  const dayAfterTomorrow = new Date(data.list[16].dt * 1000).getDay();
+  console.log(dayAfterTomorrow);
+  const dayFour = new Date(data.list[24].dt * 1000).getDay();
+  console.log(dayFour);
+
+  tomorrowTemp.innerHTML = `${daysOfTheWeek[tomorrow]}: ${data.list[8].main.temp}&deg;C`;
+  dayAfterTomorrowTemp.innerHTML = `${daysOfTheWeek[dayAfterTomorrow]}: ${data.list[16].main.temp}&deg;C`;
+  dayFourTemp.innerHTML = `${daysOfTheWeek[dayFour]}: ${data.list[24].main.temp}&deg;C`;
+
 }
 
-forecastFetch();
 
 var year = date.getFullYear();
 var modifiedt = form.format(new Date(document.lastModified));
