@@ -105,9 +105,9 @@ function displayForecast(data) {
   const dayFour = new Date(data.list[24].dt * 1000).getDay();
   console.log(dayFour);
 
-  tomorrowTemp.innerHTML = `${daysOfTheWeek[tomorrow]}: ${data.list[8].main.temp}&deg;C`;
-  dayAfterTomorrowTemp.innerHTML = `${daysOfTheWeek[dayAfterTomorrow]}: ${data.list[16].main.temp}&deg;C`;
-  dayFourTemp.innerHTML = `${daysOfTheWeek[dayFour]}: ${data.list[24].main.temp}&deg;C`;
+  tomorrowTemp.innerHTML = `<h2>${daysOfTheWeek[tomorrow]}:</h2> <p>${data.list[8].main.temp}&deg;C</p>`;
+  dayAfterTomorrowTemp.innerHTML = `<h2>${daysOfTheWeek[dayAfterTomorrow]}:</h2> <p>${data.list[16].main.temp}&deg;C</p>`;
+  dayFourTemp.innerHTML = `<h2>${daysOfTheWeek[dayFour]}:</h2> <p>${data.list[24].main.temp}&deg;C</p>`;
 
 }
 

@@ -96,6 +96,13 @@
         justify-content: space-between;
     }
 
+    .daysForecast {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+
     /*For Discover*/
 
     table {
