@@ -29,16 +29,18 @@ const form = new Intl.DateTimeFormat("en-us", {
 });
 
 /** DISPLAY WEATHER */
+const latitude = 5.55;
+const longitude = 0.19;
+const apiKey = "9cafa123f783487bdb6face6f1d55796";
+const forecastKey = "b07142610edb5043effd6a3b6ffcb5fc";
 const currentTemp = document.querySelector("#current-temp");
 const currentDesc = document.querySelector("figcaption");
 const figure = document.querySelector("#currentIcon");
 
-const urlO =
-  "https://api.openweathermap.org/data/2.5/weather?lat=5.55&lon=0.19&appid=9cafa123f783487bdb6face6f1d55796&units=metric";
-
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 async function apiFetch() {
   try {
-    const response = await fetch(urlO);
+    const response = await fetch(url);
     if (response.ok) {
       const data = await response.json();
       //console.log(data);
@@ -54,19 +56,40 @@ async function apiFetch() {
 apiFetch();
 
 function displayResults(data) {
-const currentIcon = document.createElement("img");
-currentTemp.innerHTML = `${data.main.temp}&deg;C`;
-const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-let desc = data.weather[0].description;
-currentIcon.setAttribute("loading", "lazy");
-currentIcon.setAttribute("alt", "weather icon");
-currentIcon.setAttribute("width", "70");
-currentIcon.setAttribute("height", "70");
-currentIcon.setAttribute("src", `${iconsrc}`);
-currentDesc.textContent = `${desc}`;
+  const currentIcon = document.createElement("img");
+  currentTemp.innerHTML = `${data.main.temp}&deg;C`;
+  const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+  let desc = data.weather[0].description;
+  currentIcon.setAttribute("loading", "lazy");
+  currentIcon.setAttribute("alt", "weather icon");
+  currentIcon.setAttribute("width", "70");
+  currentIcon.setAttribute("height", "70");
+  currentIcon.setAttribute("src", `${iconsrc}`);
+  currentDesc.textContent = `${desc}`;
 
-figure.appendChild(currentIcon);
+  figure.appendChild(currentIcon);
 }
+
+/** DISPLAY 3-DAYS FORECAST */
+const forecast = document.querySelector(".daysForecast");
+const forecastURL = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${latitude}&lon=${longitude}&appid=${forecastKey}&units=metric&cnt=3`;
+
+async function forecastFetch() {
+  try {
+    const response = await fetch(forecastURL);
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data);
+      //displayForecast(data);
+    } else {
+      throw Error(await response.text());
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+forecastFetch();
 
 var year = date.getFullYear();
 var modifiedt = form.format(new Date(document.lastModified));
@@ -189,4 +212,3 @@ function showList() {
   cards.classList.remove("grid");
   cards.classList.remove("default");
 }
-
