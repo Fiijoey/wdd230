@@ -20,26 +20,29 @@
         <form method="get" action="record.html" class="webform">
             <fieldset>
                 <legend>Client information</legend>
-                <label>First name* <input type = "text" name="fname" required id="fname"></label>
-                <label>Last name* <input type = "text" name="lname" required id="lname"></label>
-                <label>Title <input type = "title" name="title" id="title"></label>
-                <label>Phone <input type = "tel" name="phone" placeholder="1235551234" id="phone"></label>
-                <label>Email* <input type = "email" name="email" placeholder="fiifi@gmail.com" id="email" required pattern="[A-z0-9]+\@[A-z]+\.[A-z]"></label>
-                <label>Website <input type = "url" name="url" placeholder="http://" id="website"></label>
-                <label>Range <input type = "range" name="range" id="rangeInput" min="1" max="10"></label>
-                <label>Password* <input type = "password" name="password" required pattern="[A-z0-9]{8,}" id="password"></label>
+                <label>First name* <input type="text" name="fname" required id="fname"></label>
+                <label>Last name* <input type="text" name="lname" required id="lname"></label>
+                <label>Phone <input type="tel" name="phone" placeholder="1235551234" id="phone"></label>
+                <label>Email* <input type="email" name="email" placeholder="fiifi@gmail.com" id="email" required
+                        pattern="[A-z0-9]+\@[A-z]+\.[A-z]"></label>
+                <label>Website <input type="url" name="url" placeholder="http://" id="website"
+                        title="enter your website address here."></label>
+                <label>Range <input type="range" name="range" id="rangeInput" min="1" max="10"></label>
+                <label>Password* <input type="password" name="password" required pattern="[A-z0-9]{8,}"
+                        id="password"></label>
             </fieldset>
             <fieldset>
                 <legend>Purpose for Contact</legend>
                 <div>Audience</div>
-                <label><input type="radio" name="audience" value="new"> New</label>
-                <label><input type="radio" name="audience" value="old"> Old</label>
-                <label><input type="radio" name="audience" value="returning"> Returning</label>
+                <label><input type="radio" name="audience" id="radioAu" value="new"> New</label>
+                <label><input type="radio" name="audience" id="radioAu" value="old"> Old</label>
+                <label><input type="radio" name="audience" id="radioAu" value="returning"> Returning</label>
 
                 <div>Areas to Support</div>
-                <label><input type="checkbox" name="helping" value="yes"> Help with content</label>
-                <label><input type="checkbox" name="correction" value="yes"> Correction of content</label>
-                <label><input type="checkbox" name="collaboration" value="yes"> Collaboration request</label>
+                <label><input type="checkbox" name="helping" id="checkbox" value="yes"> Help with content</label>
+                <label><input type="checkbox" name="correction" id="checkbox" value="yes"> Correction of content</label>
+                <label><input type="checkbox" name="collaboration" id="checkbox" value="yes"> Collaboration
+                    request</label>
             </fieldset>
             <fieldset>
                 <legend>Funding</legend>

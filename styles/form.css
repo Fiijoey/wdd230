@@ -41,6 +41,7 @@ header h2 {
 
 .webform input[type="text"],
 .webform input[type="tel"],
+.webform input[type="password"],
 .webform input[type="email"],
 .webform input[type="url"],
 .webform input[type="date"],
@@ -57,7 +58,8 @@ header h2 {
 }
 
 .webform input[type="radio"],
-.webform input[type="checkbox"] {
+.webform input[type="checkbox"],
+.webform input[type="range"] {
     margin-right: 6px;
 }
 
