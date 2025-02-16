@@ -119,6 +119,22 @@ var modifiedt = form.format(new Date(document.lastModified));
 
 document.getElementById("currentyear").innerHTML = year;
 
+/** BANNER FOR MEETING */
+function closeBanner() {
+  document.getElementById("banner").style.display = "none";
+}
+
+function showBanner() {
+  const today = new Date().getDay();
+  if (today === 1 || today === 2 || today === 3) {
+    // Monday (1), Tuesday (2), Wednesday (3)
+    document.getElementById("banner").style.display = "block";
+  }
+}
+
+window.onload = showBanner;
+
+
 function generateCalendar(year, month) {
   const calendar = document.getElementById("calendar");
   const date = new Date(year, month);

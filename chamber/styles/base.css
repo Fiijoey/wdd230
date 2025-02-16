@@ -55,6 +55,24 @@ header img {
     color: var(--primary-color);
 }
 
+.banner {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 1;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: 1000px;
+
+  }
+  .banner .close-btn {
+    float: right;
+    cursor: pointer;
+  }
+
 .btns {
     margin: auto;
     margin-right: 1rem;
@@ -256,12 +274,12 @@ footer,
     margin: auto;
 }
 .spotlight-member {
-    margin: 1rem;
+    margin: .5rem;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    background-color: rgb(230, 243, 246);
+    background-color: rgb(235, 243, 245);
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
 
@@ -310,7 +328,7 @@ td {
 .photos img {
     height: 100%;
     background-color: black;
-    animation: fade 15s;
+    animation: fade 3s;
 }
 
 @keyframes fade {
