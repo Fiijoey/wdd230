@@ -102,6 +102,15 @@
         gap: 1rem;
     }
 
+    .spotlight-member {
+        flex-direction: row;
+        padding: 1rem;
+    }
+    .spotlight-member p{
+        text-align: left;
+        font-size: .8rem;
+    }
+
 
     /*For Discover*/
 

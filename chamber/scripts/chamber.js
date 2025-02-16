@@ -185,6 +185,7 @@ async function getMembers() {
     const response = await fetch(membersUrl);
     const Dmembers = await response.json();
     console.log(Dmembers);
+    let members = Dmembers.members
 
 
     function getRandomMembers(members, count) {
@@ -193,12 +194,12 @@ async function getMembers() {
           member.membership_level === "Gold" ||
           member.membership_level === "Silver"
       );
-      const shuffled = [qualifiedMembers].sort(() => .5 - Math.random());
+      const shuffled = [...qualifiedMembers].sort(() => 0.5 - Math.random());
       return shuffled.slice(0, count);
     }
 
     function displaySpotlightMembers() {
-      const spotlightMembers = getRandomMembers(Dmembers.members, 3);
+      const spotlightMembers = getRandomMembers(members, 3);
       console.log(spotlightMembers);
       const spotlightDiv = document.getElementById("spotlight");
 
