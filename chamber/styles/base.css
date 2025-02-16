@@ -67,11 +67,12 @@ header img {
     width: 100%;
     max-width: 1000px;
 
-  }
-  .banner .close-btn {
+}
+
+.banner .close-btn {
     float: right;
     cursor: pointer;
-  }
+}
 
 .btns {
     margin: auto;
@@ -182,7 +183,7 @@ footer,
 
 .person {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
     margin: 1rem;
     padding: 1rem;
     border-radius: 5px;
@@ -190,8 +191,12 @@ footer,
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.person h2 {
+    font-size: 1rem;
+}
+
 .person img {
-    border-radius: 48%;
+    border-radius: 15%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -241,7 +246,8 @@ footer,
 }
 
 
-.weather-info h2, .weather-info p {
+.weather-info h2,
+.weather-info p {
     text-align: center;
 }
 
@@ -261,7 +267,7 @@ footer,
 
 #tomorrow-temp,
 #day-after-temp,
-#day-four-temp  {
+#day-four-temp {
     margin-bottom: 2rem;
     border-radius: 5px;
     border: .5px solid var(--secondary-color);
@@ -273,6 +279,7 @@ footer,
     align-items: center;
     margin: auto;
 }
+
 .spotlight-member {
     margin: .5rem;
     align-items: center;
