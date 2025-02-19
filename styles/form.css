@@ -76,11 +76,11 @@ header h2 {
 }
 
 .webform input:required {
-    border-bottom: solid 5px darkred;
+    border-bottom: solid 5px rgb(255, 0, 0);
 }
 
 .webform input:required:valid {
-    border-bottom: solid 5px rgb(18, 108, 6);
+    border-bottom: solid 5px rgba(31, 236, 4, 0.924);
 }
 
 /*----------- FOOTER --------------*/
